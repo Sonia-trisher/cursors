@@ -1,0 +1,71 @@
+body{
+    margin:0;
+}
+.container{
+    height:100vh;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:150px; 
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+.box{
+    background-color: #26262C;
+    border: 2px solid var(--color);
+    box-shadow: 0 0 30px var(--color);
+    width: 500px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.5s;
+    position: relative;
+
+}
+.box::before{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content:'';
+    background-color: var(--color);
+    rotate: 45deg;
+    top:-25px; 
+    left: -25px;
+    transition:.5s;
+
+}
+.box::after{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content:'';
+    border: 2px solid var(--color);
+    rotate: 45deg;
+    bottom: -25px;
+    right:-25px;
+    background-color: #26262C;
+    transition: .5s;
+
+}
+.box:hover{
+    letter-spacing: 10px;
+}
+.box:hover::before{
+    left: calc(100% - 25px);
+    rotate: 0deg;
+}
+.box:hover::after{
+    right: calc(100% - 25px);
+    rotate:  0deg;
+}
+.box1{
+cursor:  url(icons8-sword-50.png),auto;
+}
+.box2{
+    cursor: url(icons8sword-50(1).png),auto;
+}
